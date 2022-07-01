@@ -82,13 +82,15 @@ func init() {
 	rootCmd.PersistentFlags().StringVarP(&v, "verbosity", "v", logrus.InfoLevel.String(), "Log level (debug, info, warn, error, fatal, panic)")
 	usageUrl := fmt.Sprintf("Base url for gitlab account. If not set will lookup for env var '%s'", config.EnvGitlabUrl)
 	usageToken := fmt.Sprintf("Gitlab token used to post comments to PR. If not set will lookup for env var '%s'", config.EnvGitlabToken)
-	usageMr := fmt.Sprintf("Id or URL of gitlab merge request. If not set will lookup for env var '%s'", config.EnvMergeRequestID)
+	usageMr := fmt.Sprintf("Id of gitlab merge request. If not set will lookup for env var '%s'", config.EnvMergeRequestID)
+	usagePid := fmt.Sprintf("Project Id of gitlab project that has merge request. If not set will lookup for env var '%s'", config.EnvGitlabPid)
 	rootCmd.PersistentFlags().StringVarP(&baseURL, "url", "u", "https://gitlab.com/", usageUrl)
 	rootCmd.PersistentFlags().StringVar(&gitlabToken, "gitlab-token", "", usageToken)
 	rootCmd.PersistentFlags().IntVarP(&mergeRequestID, "merge-request-id", "m", 0, usageMr)
 	rootCmd.PersistentFlags().StringVarP(&logFile, "log-file", "l", "./cdk.log", "path to cdk log file")
 	rootCmd.PersistentFlags().StringVarP(&tagID, "tag-id", "t", "stack", "unique identifier for stack within pipeline")
 	rootCmd.PersistentFlags().BoolVarP(&deleteNote, "delete", "d", true, "delete notes when no changes are detected for a specific tag id")
+	rootCmd.PersistentFlags().IntVarP(&projectID, "gitlab-pid", "p", 0, usagePid)
 	if Version == "" {
 		rootCmd.Version = "dev"
 	}
