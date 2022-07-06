@@ -5,9 +5,9 @@ import (
 	"io"
 	"os"
 
-	"github.com/karlderkaefer/cdk-notifier/config"
-	"github.com/karlderkaefer/cdk-notifier/gitlab"
-	"github.com/karlderkaefer/cdk-notifier/transform"
+	"github.com/napalm684/cdk-notifier/config"
+	"github.com/napalm684/cdk-notifier/gitlab"
+	"github.com/napalm684/cdk-notifier/transform"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

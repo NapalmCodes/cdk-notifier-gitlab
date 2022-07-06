@@ -1,8 +1,8 @@
 
 # cdk-notifier
 [![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=shield)](https://circleci.com/gh/circleci/circleci-docs)
-[![codecov](https://codecov.io/gh/karlderkaefer/cdk-notifier/branch/main/graph/badge.svg?token=C0BGW4EUOX)](https://codecov.io/gh/karlderkaefer/cdk-notifier)
-[![Go Report Card](https://goreportcard.com/badge/github.com/karlderkaefer/cdk-notifier)](https://goreportcard.com/report/github.com/karlderkaefer/cdk-notifier)
+[![codecov](https://codecov.io/gh/napalm684/cdk-notifier/branch/main/graph/badge.svg?token=XGY1B9P3B2)](https://codecov.io/gh/napalm684/cdk-notifier)
+[![Go Report Card](https://goreportcard.com/badge/github.com/napalm684/cdk-notifier)](https://goreportcard.com/report/github.com/napalm684/cdk-notifier)
 
 lightweight CLI tool to parse a CDK log file and post changes to pull request requests.
 Can be used to get more confidence on approving pull requests because reviewer will be aware of changes done to your environments.
@@ -11,7 +11,7 @@ Can be used to get more confidence on approving pull requests because reviewer w
 
 Install binary with latest release
 ```bash
-curl -L "https://github.com/karlderkaefer/cdk-notifier/releases/latest/download/cdk-notifier_$(uname)_amd64.gz" -o cdk-notifier.gz
+curl -L "https://github.com/napalm684/cdk-notifier/releases/latest/download/cdk-notifier_$(uname)_amd64.gz" -o cdk-notifier.gz
 gunzip cdk-notifier.gz && chmod +x cdk-notifier && rm -rf cdk-notifier.gz
 sudo mv cdk-notifier /usr/local/bin/cdk-notifier
 ```

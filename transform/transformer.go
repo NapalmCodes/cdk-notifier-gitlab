@@ -9,8 +9,8 @@ import (
 	"unicode/utf8"
 
 	"github.com/acarl005/stripansi"
-	"github.com/karlderkaefer/cdk-notifier/config"
-	"github.com/karlderkaefer/cdk-notifier/gitlab"
+	"github.com/napalm684/cdk-notifier/config"
+	"github.com/napalm684/cdk-notifier/gitlab"
 	"github.com/sirupsen/logrus"
 )
 

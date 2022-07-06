@@ -5,7 +5,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/karlderkaefer/cdk-notifier/config"
+	"github.com/napalm684/cdk-notifier/config"
 	"github.com/sirupsen/logrus"
 	"github.com/xanzy/go-gitlab"
 )

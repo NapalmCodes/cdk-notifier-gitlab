@@ -1,4 +1,4 @@
-module github.com/karlderkaefer/cdk-notifier
+module github.com/napalm684/cdk-notifier
 
 go 1.18
 
