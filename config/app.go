@@ -35,8 +35,6 @@ const (
 	EnvGitlabToken = "CI_JOB_TOKEN"
 	// EnvMergeRequestID Name of environment variable for pull request url
 	EnvMergeRequestID = "CI_MERGE_REQUEST_ID"
-	// EnvRepoName Name of environment variable for Gitlab repo
-	EnvRepoName = "CI_PROJECT_NAME"
 	// EnvGitlabUrl Name of environment variable for Gitlab Base Url
 	EnvGitlabUrl = "GITLAB_BASE_URL"
 	// EnvGitlabPid Name of environment variable for Gitlab Project ID
