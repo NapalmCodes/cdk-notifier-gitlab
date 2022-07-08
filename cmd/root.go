@@ -46,7 +46,7 @@ var rootCmd = &cobra.Command{
 			logrus.Fatal(err)
 		}
 		if appConfig.MergeRequest == 0 {
-			err = &config.ValidationError{CliArg: "pull-request-id", EnvVar: config.EnvMergeRequestID}
+			err = &config.ValidationError{CliArg: "merge-request-id", EnvVar: config.EnvMergeRequestID}
 			logrus.Warnf("Skipping... because %s", err)
 			return
 		}
