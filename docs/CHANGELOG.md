@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/napalm684/cdk-notifier/compare/v2.0.1...v2.0.2) (2022-07-08)
+
+
+### Bug Fixes
+
+* **envvars:** Env var issues with url ([#9](https://github.com/napalm684/cdk-notifier/issues/9)) ([05f4454](https://github.com/napalm684/cdk-notifier/commit/05f4454b7f3abb1a84de3e975aff5fb9b6f20c13))
+
 ## [2.0.1](https://github.com/napalm684/cdk-notifier/compare/v2.0.0...v2.0.1) (2022-07-08)
 
 
