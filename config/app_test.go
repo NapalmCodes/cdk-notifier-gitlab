@@ -150,7 +150,7 @@ func TestAppConfig_Init(t *testing.T) {
 			err: nil,
 		},
 		{
-			description: "test parse int error",
+			description: "test parse int error merge request id",
 			inputConfig: AppConfig{
 				LogFile:     "./cdk.log",
 				ProjectID:   1,
@@ -170,6 +170,29 @@ func TestAppConfig_Init(t *testing.T) {
 			err: &strconv.NumError{
 				Func: "ParseInt",
 				Num:  "23as",
+				Err:  strconv.ErrSyntax,
+			},
+		},
+		{
+			description: "test parse int error project id",
+			inputConfig: AppConfig{
+				LogFile:     "./cdk.log",
+				GitlabToken: "some-token",
+			},
+			envVars: map[string]string{
+				EnvMergeRequestID: "23",
+				EnvGitlabUrl:      "https://gitlab.com/",
+				EnvGitlabPid:      "1as",
+			},
+			expectedConfig: AppConfig{
+				LogFile:      "./cdk.log",
+				ProjectID:    0,
+				GitlabToken:  "some-token",
+				MergeRequest: 0,
+			},
+			err: &strconv.NumError{
+				Func: "ParseInt",
+				Num:  "1as",
 				Err:  strconv.ErrSyntax,
 			},
 		},
