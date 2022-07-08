@@ -55,13 +55,14 @@ func (a *AppConfig) Init() error {
 		pidStr := readFromEnv(EnvGitlabPid)
 		pidInt64, err := strconv.ParseInt(pidStr, 10, 0)
 		if err != nil {
-			logrus.Errorf("Could not parse env %s with value '%v' to int", EnvMergeRequestID, pidStr)
-			panic(err)
+			logrus.Errorf("Could not parse env %s with value '%v' to int", EnvGitlabPid, pidStr)
+			return err
 		}
 		a.ProjectID = int(pidInt64)
 	}
-	if a.GitlabUrl == "" {
-		a.GitlabUrl = readFromEnv(EnvGitlabUrl)
+	envGitlabUrl := readFromEnv(EnvGitlabUrl)
+	if envGitlabUrl != "" {
+		a.GitlabUrl = envGitlabUrl
 	}
 	if a.MergeRequest == 0 {
 		prNumber, err := readMergeRequestFromEnv()
