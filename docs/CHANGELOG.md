@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/napalm684/cdk-notifier/compare/v2.0.2...v2.0.3) (2022-07-26)
+
+
+### Bug Fixes
+
+* **deps:** update golang dependencies ([#10](https://github.com/napalm684/cdk-notifier/issues/10)) ([dd12ffe](https://github.com/napalm684/cdk-notifier/commit/dd12ffef8e77187dda8746f4cdd5c89512897400))
+
 ## [2.0.2](https://github.com/napalm684/cdk-notifier/compare/v2.0.1...v2.0.2) (2022-07-08)
 
 
